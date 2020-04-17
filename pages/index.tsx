@@ -1,11 +1,14 @@
 import Head from 'next/head'
 import dynamic from 'next/dynamic'
 
-const WithPouchDBAuthentication = dynamic(() => import('./with-pouchdb-authentication'), {
-  ssr: false,
-  loading: () => <p>Loading...</p>,
-})
-const WithCustomLogin = dynamic(() => import('./with-custom-login'), {
+const WithPouchDBAuthentication = dynamic(
+  () => import('../components/with-pouchdb-authentication'),
+  {
+    ssr: false,
+    loading: () => <p>Loading...</p>,
+  },
+)
+const WithCustomLogin = dynamic(() => import('../components/with-custom-login'), {
   ssr: false,
   loading: () => <p>Loading...</p>,
 })
